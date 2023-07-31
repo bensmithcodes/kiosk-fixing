@@ -27,6 +27,20 @@ const data = {
       calorie: 360,
       image: '/images/t-mcdonalds-Vanilla-McCafe-Shake-Medium.jpg',
     },
+    
+{
+category:
+"Beverages",
+name:
+"Lemonade",
+price:
+2,
+calories:
+100,
+image:
+"/images/lemonade.jpeg",
+},
+
     {
       category: 'Beverages',
       name: 'Hot Chooooocolate',
