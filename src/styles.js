@@ -5,6 +5,8 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
     display: 'flex',
+    maxWidth: '1200px', // Change this value to make the app wider
+    margin: '0 auto', // Center the app horizontally
     flexDirection: 'column',
   },
   center: {
