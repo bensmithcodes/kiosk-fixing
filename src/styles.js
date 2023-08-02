@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
     display: 'flex',
-    maxWidth: '1200px', // Change this value to make the app wider
+     maxWidth: '1200px', // Change this value to make the app wider
     margin: '0 auto', // Center the app horizontally
     flexDirection: 'column',
   },
@@ -14,6 +14,8 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    color: '#BB4A4A'
+
   },
   column: { flexDirection: 'column' },
   main: {
@@ -21,13 +23,24 @@ export const useStyles = makeStyles((theme) => ({
     overflow: 'auto',
     flexDirection: 'column',
     display: 'flex',
-    color: '#ffffff',
+    color: '#BB4A4A',
+  },
+  browntext: {
+    flex: 1,
+    overflow: 'auto',
+    flexDirection: 'column',
+    display: 'flex',
+    color:'#BB4A4A',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+
   },
   navy: {
-    backgroundColor: '#BB4A4A',
+    backgroundColor: '#FBFBFB',
   },
-  green: {
-    backgroundColor: '#49D901',
+  white: {
+    backgroundColor: '#ffffff',
   },
   footer: {},
   // choose screen
@@ -35,6 +48,7 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    color: '#ffffff'
   },
   // order screen
   red: {
@@ -42,17 +56,20 @@ export const useStyles = makeStyles((theme) => ({
     color: '#ffffff',
   },
   bordered: {
-    borderWidth: 2,
+    borderWidth: 4,
     borderRadius: 5,
-    margin: 5,
-    borderStyle: 'solid',
+    borderColor: '#771313',
+    margin: 15,
+    borderStyle: 'groove',
   },
   row: {
     display: 'flex',
     padding: 10,
   },
   space: {
-    padding: 10,
+    padding: 25,
+    textAlign: 'center',
+    fontSize: 'large'
   },
   around: {
     justifyContent: 'space-around',
@@ -62,6 +79,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   largeButton: {
     width: 250,
+    height: 79
   },
   largeInput: {
     width: '60px!important',
@@ -77,17 +95,18 @@ export const useStyles = makeStyles((theme) => ({
     height: 100,
   },
   title: {
-    marginTop: 18,
+    marginTop: 27,
+    color: '#BB4A4A'
   },
   card: { margin: 10 },
   media: { width: 200 },
   ready: {
-    backgroundColor: '#003080',
+    backgroundColor: '#0DFB14',
     color: '#ffffff',
     marginTop: 0,
   },
   processing: {
-    backgroundColor: '#404040',
+    backgroundColor: '#FB0032',
     color: '#ffffff',
     marginTop: 0,
   },
@@ -96,6 +115,7 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    
   },
   avatar: {
     margin: theme.spacing(1),

@@ -1,4 +1,6 @@
 import React, { useContext } from 'react';
+import { Route, Link } from 'react-router-dom';
+
 
 import {
   Box,
@@ -12,6 +14,7 @@ import { useStyles } from '../styles';
 import Logo from '../components/Logo';
 import { setPaymentType } from '../actions';
 import { Store } from '../Store';
+import OrderScreen from './OrderScreen';
 export default function HomeScreen(props) {
   const { dispatch } = useContext(Store);
   const styles = useStyles();
@@ -26,7 +29,9 @@ export default function HomeScreen(props) {
   return (
     <Box className={[styles.root, styles.navy]}>
       <Box className={[styles.main, styles.center]}>
-        <Logo large></Logo>
+      <Link to="/order">
+            <Logo large />
+          </Link>
         <Typography
           className={styles.center}
           gutterBottom

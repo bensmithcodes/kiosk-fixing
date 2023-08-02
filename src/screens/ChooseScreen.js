@@ -28,7 +28,7 @@ export default function HomeScreen(props) {
           
           <Typography
           
-            className={styles.center}
+            className={styles.browntext}
             
             gutterBottom
             variant="h3"

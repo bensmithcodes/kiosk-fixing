@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Store } from '../Store';
 import { addToOrder, removeFromOrder } from '../actions';
+import { Route, Link } from 'react-router-dom';
+
 import {
   Box,
   Button,
@@ -114,7 +116,7 @@ export default function ReviewScreen(props) {
           </Box>
         </Dialog>
         <Box className={[styles.center, styles.column]}>
-          <Logo large></Logo>
+        <Link to="/order">  <Logo large ></Logo></Link>
           <Typography
             gutterBottom
             className={styles.title}
@@ -152,7 +154,7 @@ export default function ReviewScreen(props) {
                         color="textSecondary"
                         component="p"
                       >
-                        {orderItem.calorie} Cal
+                        {orderItem.calorie} calories per item.
                       </Typography>
                       <Typography
                         variant="body2"

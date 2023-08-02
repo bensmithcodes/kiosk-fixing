@@ -42,7 +42,7 @@ export default function CompleteOrderScreen(props) {
                 variant="h1"
                 component="h1"
               >
-                Thank you!
+                Thank You!
               </Typography>
               <Typography
                 gutterBottom
@@ -50,7 +50,7 @@ export default function CompleteOrderScreen(props) {
                 variant="h3"
                 component="h3"
               >
-                Your order number is {newOrder.number}
+                Your order number is  # {newOrder.number}
               </Typography>
             </>
           )}
