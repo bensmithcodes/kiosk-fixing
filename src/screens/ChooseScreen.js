@@ -32,11 +32,11 @@ export default function HomeScreen(props) {
             
             gutterBottom
             variant="h3"
-            component="h3"
+            component="h5"
          
           >
             
-            Where will you be eating today?
+             Dining in or Carry-out?
           </Typography>
           <Box className={styles.cards}>
             <Card className={[styles.card, styles.space]}>

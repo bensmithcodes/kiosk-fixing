@@ -34,8 +34,8 @@ const initialState = {
   productList: { loading: true },
   order: {
     orderItems: [],
-    orderType: 'Eat in',
-    paymentType: 'Pay here',
+    orderType: 'Eat In',
+    paymentType: 'Pay Here',
     taxPrice: 0,
     totalPrice: 0,
     itemsCount: 0,

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Card, CardActionArea, Typography } from '@material-ui/core';
 import TouchAppIcon from '@material-ui/icons/TouchApp';
+import RestIcon from '@material-ui/icons/FastfoodOutlined';
+
 import { useStyles } from '../styles';
 import Logo from '../components/Logo';
                     //background is white.
@@ -13,11 +15,12 @@ export default function HomeScreen(props) {
         <Box className={[styles.root, styles.main]}>  
           <Box className={[styles.main, styles.center]}>
             <Typography variant="h8" component="h5">
-            Daddy's  || Soulfood  &  ||  Grille 
+            Daddy's  || Soulfood  &  ||  Grille         
+ 
             </Typography>
             <Typography variant="h1" component="h1" className={styles.bold}>
               Order <br />
-              & Pay
+              <RestIcon/>
               <br />
               Here!
             </Typography>
