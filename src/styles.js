@@ -5,7 +5,7 @@ export const useStyles = makeStyles((theme) => ({
   root: {
     height: '100vh',
     display: 'flex',
-     maxWidth: '1200px', // Change this value to make the app wider
+     maxWidth: '1900px', // Change this value to make the app wider
     margin: '0 auto', // Center the app horizontally
     flexDirection: 'column',
   },
@@ -14,6 +14,8 @@ export const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
+    maxWidth: '1900px', // Change this value to make the app wider
+
     color: '#BB4A4A'
 
   },
@@ -22,6 +24,8 @@ export const useStyles = makeStyles((theme) => ({
     flex: 1,
     overflow: 'auto',
     flexDirection: 'column',
+    maxWidth: '1900px', // Change this value to make the app wider
+
     display: 'flex',
     color: '#BB4A4A',
   },
