@@ -27,7 +27,7 @@ import {
 export const Store = createContext();
 
 const initialState = {
-  widthScreen: false,
+  widthScreen: true,
   orderList: { loading: true },
   queueList: { loading: true },
   categoryList: { loading: true },
