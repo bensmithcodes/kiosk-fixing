@@ -32,9 +32,19 @@ export default function AdminScreen(props) {
       alert(err.message);
     }
   };
+  const refreshOrders = () => {
+    listOrders(dispatch);
+  };
 
   useEffect(() => {
+    // Initial load of orders
     listOrders(dispatch);
+
+    // Refresh orders every 6 seconds
+    const intervalId = setInterval(refreshOrders, 35000);
+
+    // Clear interval on component unmount
+    return () => clearInterval(intervalId);
   }, [dispatch]);
 
   return (
