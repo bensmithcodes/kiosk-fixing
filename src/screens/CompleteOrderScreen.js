@@ -5,7 +5,6 @@ import Logo from '../components/Logo';
 import { Store } from '../Store';
 import { Alert } from '@material-ui/lab';
 import { createOrder } from '../actions';
-import { io } from 'socket.io-client'; // Import the WebSocket library
 
 export default function CompleteOrderScreen(props) {
   const styles = useStyles();
@@ -16,19 +15,8 @@ export default function CompleteOrderScreen(props) {
   useEffect(() => {
     if (order.orderItems.length > 0) {
       createOrder(dispatch, order);
-
-      // Initialize WebSocket connection
-      const socket = io('http://localhost:5000'); // Use your actual WebSocket server URL
-
-      // Emit a 'orderCompleted' event to notify the queue screen
-      socket.emit('orderCompleted', newOrder.number); // Adjust the event name and payload
-
-      // Clean up: Disconnect the WebSocket when the component unmounts
-      return () => {
-        socket.disconnect();
-      };
     }
-  }, [order, dispatch, newOrder.number]);
+  }, [order]);
 
   return (
     <Box className={[styles.root, styles.navy]}>
@@ -55,7 +43,7 @@ export default function CompleteOrderScreen(props) {
                 variant="h1"
                 component="h1"
               >
-                Thank You!
+                Thank you!
               </Typography>
               <Typography
                 gutterBottom
@@ -63,7 +51,7 @@ export default function CompleteOrderScreen(props) {
                 variant="h3"
                 component="h3"
               >
-                Your order number is  # {newOrder.number}
+                Your order number is {newOrder.number}
               </Typography>
             </>
           )}
