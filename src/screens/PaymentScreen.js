@@ -32,7 +32,7 @@ export default function CompleteOrderScreen(props) {
           </Typography>
           <CircularProgress />
          <div className={[styles.center]}>
-           {/* Render the Keypad component and pass the handleNumberClick function */}
+           {/* Render the Keypad component and pass the handleNumberClick function */} 
            <Keypad onNumberClick={handleNumberClick} />
             {/* Display the entered PIN */}
             <Typography variant="h4" component="h4">

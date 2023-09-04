@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from 'react';
+import { io } from 'socket.io-client';
+
 import { Store } from '../Store';
 import { listQueue } from '../actions';
 import {
@@ -12,6 +14,7 @@ import {
 import { useStyles } from '../styles';
 import { Alert } from '@material-ui/lab';
 import { Helmet } from 'react-helmet';
+
 export default function QueueScreen(props) {
   const styles = useStyles();
 
@@ -19,8 +22,34 @@ export default function QueueScreen(props) {
   const { queue, loading, error } = state.queueList;
 
   useEffect(() => {
+    const socket = io('mongodb+srv://bencoder28:sabers13@kiosk.qqa7es6.mongodb.net/'); // Replace with your socket server URL
+
+    socket.on('queueUpdate', () => {
+      // Call the action to refresh the queue data
+      listQueue(dispatch);
+    });
+
+    return () => {
+      socket.disconnect(); // Disconnect when the component unmounts
+    };
+  }, [dispatch]);
+
+  useEffect(() => {
     listQueue(dispatch);
   }, [dispatch]);
+
+  // Function to refresh the page
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
+  // Refresh the page every 5 seconds (5000 milliseconds)
+  useEffect(() => {
+    const refreshInterval = setInterval(refreshPage, 20000);
+    return () => {
+      clearInterval(refreshInterval); // Clear the interval when the component unmounts
+    };
+  }, []);
 
   return (
     <Box className={[styles.root]}>
